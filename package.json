@@ -7,7 +7,7 @@
     "dev": "gulp server",
     "build": "gulp build"
   },
-  "author": "Tech Three",
+  "author": "Takuya Takahashi",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.0.0",
