@@ -3,6 +3,7 @@ const imagemin = require('gulp-imagemin');
 const pngquant = require('imagemin-pngquant');
 const mozjpeg = require('imagemin-mozjpeg');
 const changed = require('gulp-changed');
+const webp     = require('gulp-webp');
 
 const paths = {
   srcDir : './src/assets/images',
@@ -27,5 +28,6 @@ gulp.task('imagemin', function(){
   return gulp.src(srcGlob)
     .pipe(changed(dstGlob))
     .pipe(imagemin(options))
+    .pipe(webp())  
     .pipe(gulp.dest(dstGlob));
 });
