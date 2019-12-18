@@ -36,15 +36,13 @@
     "lodash": "^4.17.15",
     "require-dir": "^1.2.0",
     "rimraf": "^3.0.0",
-    "vinyl-source-stream": "^2.0.0"
+    "vinyl-source-stream": "^2.0.0",
+    "gulp-ejs": "^5.0.0",
+    "gulp-typescript": "^6.0.0-alpha.1",
+    "tsify": "^4.0.1",
+    "typescript": "^3.7.3"    
   },
   "browserslist": [
     "last 2 versions"
   ],
-  "dependencies": {
-    "gulp-ejs": "^5.0.0",
-    "gulp-typescript": "^6.0.0-alpha.1",
-    "tsify": "^4.0.1",
-    "typescript": "^3.7.3"
-  }
 }
