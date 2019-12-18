@@ -1,6 +1,27 @@
 @import './iconfont/icon';
+@import './commons/typography';
+@import './commons/mediaquery';
+@import './commons/bootstrap-grid';
 
-body {
 
-} 
+.mq {
+  &:before {
+    @include mq(xxl) {
+      content: "xxl";
+    }          
+    @include mq(xl) {
+      content: "xl";
+    }         
+    @include mq(l) {
+      content: "l";
+    }     
+    @include mq(m) {
+      content: "m";
+    }  
+    @include mq(s) {
+      content: "s";
+    }  
+ 
+  }
 
+}

@@ -42,6 +42,9 @@
     "last 2 versions"
   ],
   "dependencies": {
-    "gulp-ejs": "^5.0.0"
+    "gulp-ejs": "^5.0.0",
+    "gulp-typescript": "^6.0.0-alpha.1",
+    "tsify": "^4.0.1",
+    "typescript": "^3.7.3"
   }
 }

@@ -1,0 +1,65 @@
+$bp-xxl:1920px;
+$bp-xl:1200px;
+$bp-l:1024px;
+$bp-m :812px;
+$bp-s:767px;
+$bp-xs:480px;
+$bp-xxs:320px;
+
+@mixin mq($media-width) {
+  @if $media-width == xxs {
+    @media only screen and(max-width: $bp-xxs) {
+      @content;
+    }
+  }
+
+  @else if $media-width == xs {
+    @media only screen and(max-width: $bp-xs) {
+      @content;
+    }
+  }
+
+  @else if $media-width == s {
+    @media only screen and(max-width: $bp-s) {
+      @content;
+    }
+  }
+
+  @else if $media-width == m {
+    @media only screen and(max-width: $bp-m) {
+      @content;
+    }
+  }
+
+  @else if $media-width == l {
+    @media only screen and(max-width: $bp-l) {
+      @content;
+    }
+  }
+
+  @else if $media-width == xl {
+    @media only screen and(max-width: $bp-xl) {
+      @content;
+    }
+  }
+
+  @else if $media-width == xxl {
+    @media only screen and(max-width: $bp-xxl) {
+      @content;
+    }
+  }
+}
+
+@mixin desktopHidden() {
+  display: none;
+
+  @include mq(s) {
+    display: block;
+  }
+}
+
+@mixin mobileHidden() {
+  @include mq(s) {
+    display: none;
+  }
+}

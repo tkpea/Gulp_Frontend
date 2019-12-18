@@ -11,7 +11,7 @@ const path = {
 
 gulp.task( "build:ejs", function () {
   return gulp.src([path.srcDir, '!' + "./src/**/_*.ejs"])
-        .pipe(ejs())
+        .pipe(ejs(), { async: true })
         .pipe(rename({ extname: '.html' }))
         .pipe(gulp.dest(path.dstDir));
 });
@@ -19,11 +19,11 @@ gulp.task( "build:ejs", function () {
 gulp.task('watch:ejs', function() {
 
   const ejsOptions = {
-    pretty: true // 圧縮はしないでネスト上で出力
+    pretty: true 
   };
 
   return gulp.src([path.srcDir, path.rmSrcDir])
-    .pipe(ejs(ejsOptions))
+    .pipe(ejs(ejsOptions), { async: true })
     .pipe(rename({ extname: '.html' }))
     .pipe(gulp.dest(path.dstDir))
 })
