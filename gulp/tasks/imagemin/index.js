@@ -28,6 +28,7 @@ gulp.task('imagemin', function(){
   return gulp.src(srcGlob)
     .pipe(changed(dstGlob))
     .pipe(imagemin(options))
-    .pipe(webp())  
+    .pipe(gulp.dest(dstGlob))
+    .pipe(webp())
     .pipe(gulp.dest(dstGlob));
 });
